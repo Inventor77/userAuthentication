@@ -9,6 +9,6 @@
 
 ### Built With
 
-`Express` `Nodemon` `MongoDB Mongoose` `dotenv` 
+`Express` `Nodemon` `MongoDB Mongoose` `dotenv` `bcryptjs`
 
 
