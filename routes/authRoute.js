@@ -7,7 +7,7 @@ router.post("/signup", async (req, res) => {
 	// Validate data
 	const { error } = registerValidation(req.body);
 	if (error) return res.status(400).send(error.details[0].message);
-
+	// is email there
 	const emailExist = await User.findOne({ email: req.body.email });
 	if (emailExist) return res.status(400).send("Email already exist");
 
@@ -30,6 +30,19 @@ router.post("/signup", async (req, res) => {
 });
 
 // Login
-router.post("/login", (req, res) => {});
+router.post("/login", async (req, res) => {
+	const { error } = loginValidation(req.body);
+	if (error) return res.status(400).send(error.details[0].message);
+
+	// email existence
+	const user = await User.findOne({ email: req.body.email });
+	if (!user) return res.status(400).send("Email not Found");
+
+	// checking password
+	const validPassword = await bcrypt.compare(req.body.password, user.password);
+	if (!validPassword) return res.status(400).send("Invalid Pass");
+
+	res.send("logged in");
+});
 
 module.exports = router;
