@@ -24,6 +24,6 @@ app.use(express.json());
 // Route Middleware
 app.use("/", authRoute);
 
-app.listen(5000, () => {
+app.listen(8000, () => {
 	console.log("up and running");
 });
