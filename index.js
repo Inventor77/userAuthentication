@@ -7,6 +7,8 @@ const dotenv = require("dotenv");
 // Routes
 const authRoute = require("./routes/authRoute");
 
+const homeRoute = require("./routes/home")
+
 dotenv.config();
 
 // DB
@@ -23,6 +25,7 @@ app.use(express.json());
 
 // Route Middleware
 app.use("/", authRoute);
+app.use("/", homeRoute);
 
 app.listen(8000, () => {
 	console.log("up and running");
