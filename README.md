@@ -9,6 +9,6 @@
 
 ### Built With
 
-`Express` `Nodemon` `MongoDB Mongoose` `joi` `dotenv` `bcryptjs` `JSONWebToken`
+`Express` `Nodemon` `MongoDB Mongoose` `joi` `dotenv` `bcryptjs` `JSONWebToken` `React` `Babel` `Webpack`
 
 
