@@ -22,12 +22,15 @@ export const Signup = () => {
 						<TextField label="Name" name="name" type="text" />
 						<TextField label="Email" name="email" type="email" />
 						<TextField label="Password" name="password" type="password" />
-						<button className="btn btn-dark mt-3" type="submit">
+						<button className="btn btn-dark mt-1" type="submit">
 							Register
 						</button>
-						<button className="btn btn-danger mt-3 ms-4" type="reset">
+						<button className="btn btn-danger mt-1 ms-4" type="reset">
 							Reset
 						</button>
+						<h5 className="mt-4">
+							Have an account? <a href="/login">Signup</a>
+						</h5>
 					</Form>
 				</div>
 			)}

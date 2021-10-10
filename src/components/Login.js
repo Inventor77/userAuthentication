@@ -26,6 +26,9 @@ export const Signup = () => {
 						<button className="btn btn-danger mt-3 ms-4" type="reset">
 							Reset
 						</button>
+						<h5 className="mt-4">
+							Don't have an account? <a href="/signup">Signup</a>
+						</h5>
 					</Form>
 				</div>
 			)}
