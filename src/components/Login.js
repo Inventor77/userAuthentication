@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import { TextField } from "./TextField";
 
-export const Signup = () => {
+export const Login = () => {
 	return (
 		<Formik
 			initialValues={{
